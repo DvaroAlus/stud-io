@@ -424,27 +424,27 @@ body {
   }
 }
 
-@supports (padding-top: clamp( 1.25rem , 0.7rem  +  2.75vw , 4rem )) {
+@supports (padding-top: clamp( 2.5rem , 2.2rem  +  1.5vw , 4rem )) {
   .services {
-    padding-top: clamp( 1.25rem , 0.7rem  +  2.75vw , 4rem );
+    padding-top: clamp( 2.5rem , 2.2rem  +  1.5vw , 4rem );
   }
 }
 
-@supports not (padding-top: clamp( 1.25rem , 0.7rem  +  2.75vw , 4rem )) {
+@supports not (padding-top: clamp( 2.5rem , 2.2rem  +  1.5vw , 4rem )) {
   .services {
-    padding-top: calc(1.25rem + 2.75 * (100vw - 20rem) / 100);
+    padding-top: calc(2.5rem + 1.5 * (100vw - 20rem) / 100);
   }
 }
 
-@supports (padding-bottom: clamp( 1.25rem , 0.7rem  +  2.75vw , 4rem )) {
+@supports (padding-bottom: clamp( 2.5rem , 2.2rem  +  1.5vw , 4rem )) {
   .services {
-    padding-bottom: clamp( 1.25rem , 0.7rem  +  2.75vw , 4rem );
+    padding-bottom: clamp( 2.5rem , 2.2rem  +  1.5vw , 4rem );
   }
 }
 
-@supports not (padding-bottom: clamp( 1.25rem , 0.7rem  +  2.75vw , 4rem )) {
+@supports not (padding-bottom: clamp( 2.5rem , 2.2rem  +  1.5vw , 4rem )) {
   .services {
-    padding-bottom: calc(1.25rem + 2.75 * (100vw - 20rem) / 100);
+    padding-bottom: calc(2.5rem + 1.5 * (100vw - 20rem) / 100);
   }
 }
 
@@ -1113,6 +1113,13 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
   }
 }
 
+@media (max-width: 25em) {
+  .services {
+    padding-left: 1.0625rem;
+    padding-right: 1.0625rem;
+  }
+}
+
 @media (max-width: 82.3125em) {
   .slide-customers {
     height: 30.4375rem;
@@ -1163,6 +1170,8 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
 
   .menu__body::after {
     content: "";
+    background: url("../img/bg.jpg") top center no-repeat;
+    opacity: 0.8;
     top: 0;
     left: 0;
     bottom: 0;
@@ -1286,16 +1295,44 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
   }
 }
 
-@media (max-width: 27.1875em) {
+@media (max-width: 37.5em) {
   .slide-customers__decor {
     width: 3.125rem;
     height: 3.125rem;
   }
 }
 
-@media (max-width: 22.375em) {
+@media (max-width: 31.25em) {
+  .body__text {
+    font-size: 1.1875rem;
+    margin-bottom: 3.125rem;
+  }
+
+  .body__button {
+    font-size: 1.25rem;
+    padding: 0.9375rem 2.8125rem 0.9375rem 1rem;
+  }
+
   .slide-customers__decor {
     display: none;
+  }
+}
+
+@media (max-width: 26.5625em) {
+  .customers__header {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+  }
+
+  .customers__title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 23.4375em) {
+  .row__text {
+    font-size: 1rem;
   }
 }
 
